@@ -56,7 +56,7 @@ def villa(error):
 def villa(error):
     return '''
     <h2>Error 500</h2>
-    <h3>Vill í forrit</h3>
+    <h3>Vill í forritinu</h3>
     <a href="/">Til Baka</a>
     '''
 
