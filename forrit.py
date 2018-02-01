@@ -29,10 +29,21 @@ adalFrettir = [["Níu fugla dagur", 1],
 def lidur2():
     return template('v2/lidur2', frettir=adalFrettir)
 
-frettirnar = [{"titill":"Níu fugla dagur","grein":"Ólafía Þórunn Kristinsdóttir endaði i 26. sæti á Pure Silk mótinu á Bahamaeyjum sem lauk í gær.","netfang":"ritari1@Bestufrettirnar.is","mynd":"golf.png"},
-              {"titill":"Klassískur G-Class fær uppfærslu","grein":"Er 170 kílóum léttari en samt lengri og breiðari. Nýr G-Class heldur áfram sínu klassíska útliti sem hann hefur haft síðan hann var fyrst kynntur til sögunnar árið 1979.","netfang":"ritari2@Bestufrettirnar.is","mynd":"benz.png"},
-              {"titill":"3 í haldi vegna send­ing­ar á Skák­sam­bandið","grein":"Þrír ein­stak­ling­ar eru nú í gæslu­v­arðhaldi vegna rann­sókn­ar á inn­flutn­ingi fíkni­efna í send­ingu sem merkt var Skák­sam­bandi Íslands. „Rann­sókn­in er í þokka­leg­um far­vegi,“ seg­ir Mar­geir Sveins­son hjá rann­sókn­ar­deild lög­regl­unn­ar á höfuðborg­ar­svæðinu. „Við erum að vinna í þessu.“","netfang":"ritari1@Bestufrettirnar.is","mynd":"logreglan.png"},
-              {"titill":"Flughált sums staðar á landinu","grein":"Hálka er á vegum víða um land í dag og sums staðar snjóþekja. Vegagerðin varar við því að flughált geti verið á útvegum á Suður- og Suðvesturlandi, í Borgarfirði og víða á Norður- og Austurlandi. Spáð er frostlausu veðri við suður- og vesturströndina í dag en frosti annars staðar.","netfang":"ritari3@Bestufrettirnar.is","mynd":"halt.png"}]
+frettirnar = [{"titill":"Níu fugla dagur",
+               "grein":"Ólafía Þórunn Kristinsdóttir endaði i 26. sæti á Pure Silk mótinu á Bahamaeyjum sem lauk í gær.",
+               "netfang":"ritari1@Bestufrettirnar.is",
+               "mynd":"golf.png"},
+              {"titill":"Klassískur G-Class fær uppfærslu",
+               "grein":"Er 170 kílóum léttari en samt lengri og breiðari. Nýr G-Class heldur áfram sínu klassíska útliti sem hann hefur haft síðan hann var fyrst kynntur til sögunnar árið 1979.",
+               "netfang":"ritari2@Bestufrettirnar.is",
+               "mynd":"benz.png"},
+              {"titill":"3 í haldi vegna send­ing­ar á Skák­sam­bandið",
+               "grein":"Þrír ein­stak­ling­ar eru nú í gæslu­v­arðhaldi vegna rann­sókn­ar á inn­flutn­ingi fíkni­efna í send­ingu sem merkt var Skák­sam­bandi Íslands. „Rann­sókn­in er í þokka­leg­um far­vegi,“ seg­ir Mar­geir Sveins­son hjá rann­sókn­ar­deild lög­regl­unn­ar á höfuðborg­ar­svæðinu. „Við erum að vinna í þessu.“",
+               "netfang":"ritari1@Bestufrettirnar.is",
+               "mynd":"logreglan.png"},
+              {"titill":"Flughált sums staðar á landinu","grein":"Hálka er á vegum víða um land í dag og sums staðar snjóþekja. Vegagerðin varar við því að flughált geti verið á útvegum á Suður- og Suðvesturlandi, í Borgarfirði og víða á Norður- og Austurlandi. Spáð er frostlausu veðri við suður- og vesturströndina í dag en frosti annars staðar.",
+               "netfang":"ritari3@Bestufrettirnar.is",
+               "mynd":"halt.png"}]
 @route('/frett/<numer>')
 def frett(numer):
     return template('v2/frett', frettirnar[int(numer)-1])
