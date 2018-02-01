@@ -52,5 +52,12 @@ def villa(error):
     <h3>Síða finnst ekki</h3>
     <a href="/">Til Baka</a>
     '''
+@error(500)
+def villa(error):
+    return '''
+    <h2>Error 500</h2>
+    <h3>Vill í forrit</h3>
+    <a href="/">Til Baka</a>
+    '''
 
 run(host="0.0.0.0", port=os.environ.get('PORT'))
